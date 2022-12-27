@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Hakkında</title>
+        <link rel="icon" href="icon2.png"type=image/x-icon/>
+        <meta charset="utf-8">
+        <style type="text/css">
+        body{background-image:url("bg2.jpg");
+             background-repeat: no-repeat;
+             background-position: 130% 102%;}
+        html{-webkit-touch-callout: none;
+             -webkit-user-select: none;
+             -khtml-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+             user-select: none;}
+        #a{background-color:#0b333f;;
+           margin: -10px;
+           height: 78px;
+           position: fixed;
+           width: 100%;
+         }
+        #b{background-color: #0b333f;;
+           height: 75px;
+           width:15%;
+           font-size: 25px;
+           border: none;
+           margin-left: 300px;
+           font-family:'Segoe Print';
+         }
+         .c{background-color: #0b333f;
+           height: 75px;
+           width:15%;
+           font-size: 25px;
+           border: none;
+           font-family:'Segoe Print';
+         }
+         a:link {font-weight:bold;color: aliceblue;}
+         a:visited{color: aliceblue;}
+         a:hover{background-color:#0b333f;color:#f0bf00;text-decoration:none;}
+         a:active{background-color:#0b333f;color:#f0bf00;font-style:italic;}
+         #başadön{background-color:#0b333f;
+                  height: 58px;
+                  width: 101.2%;
+                  margin-top:420px;
+                  margin-left:-10px;
+                  margin-right:-20px;
+                  margin-bottom:-20px;
+                  color: aliceblue;}
+         #sam{ margin-left: 110px;}
+         #sun{ margin-left: 410px ;
+               margin-top: -18px;}
+         #ço{ margin-left: 680px ;
+               margin-top: -18px;}
+         #rum{ margin-left: 965px ;
+               margin-top: -18px;}
+        #an{ margin-left: 1225px ;
+               margin-top: -18px;}
+        #zxc{margin-top:30px;
+             font-size: 20px;}
+        li{font-size: 20px;
+           margin-left:20px;}
+        .container {width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top:-750px}
+        #timer {color: black;
+                font-size: 2.5rem;}
+        .label {font-size: 2.5rem;
+                padding-left: 0.25rem;}
+        #aynn{width: 100%;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.5rem ;
+              margin-top:-800px}
+        </style>
+    </head>
+    <body>
+      <div id="a">
+            <button class="c"> <a href=index.html style="text-decoration: none">First Motors</a></button>
+            <button id="b"> <a href=xx.html style="text-decoration: none">Hizmetler</a></button>
+            <button class="c"> <a href=ddd.html style="text-decoration: none">Bayiler</a></button>
+            <button class="c"> <a href=aaa.html style="text-decoration: none">Hakkında</a></button>
+            <button class="c"> <a href=yyy.html style="text-decoration: none">Bize ulaşın</a></button>
+      </div>
+      x
+      <p>x</p>
+      <ul id="zxc"><b>Hakkında sayfasına hoşgeldiniz</b></ul>
+        <li>Sitemiz 2022 yılında kurulmuştur.</li>
+        <li>Araç alım-satım ve inceleme konusu altında açılan firstmotors şirketinin tüm hakları saklıdır.</li>
+        <li>Bu sitenin haklarının tamamı firstmotors şirketine aittir.</li>
+        <li>Sitedeki bilgilerin izinsiz alınması ve kullanılması yasaktır.</li>
+        <li>Sitenin içeriğinin değiştirilmesi yasaktır.</li>
+        <li>Siteye uygunsuz veri ve yabancı içerik yüklemek yasaktır.</li>
+      <div id="başadön">
+        <div id="sam"><p></p><br>Whatsapp: 0850 *** 19 33</div>
+        <div id="sun">GSM: 0537 *** 19 33</div>
+        <div id="ço">Instagram: first_motors</div>
+        <div id="rum">Twitter: firtst_motorss</div>
+        <div id="an">Mail: firstmotors@mail.com</div>
+        </div>
+      <script>
+        window.addEventListener('contextmenu',function(e){e.preventDefault();},false);
+      </script>
+      <div class="container">
+        <p id="timer">
+            <span id="timer-gunler"></span>
+            <span id="timer-saatler"></span>
+            <span id="timer-dakikalar"></span>
+            <span id="timer-saniyeler"></span>
+        </p>
+    </div>
+      <script>
+        var endDate = new Date("Mar 15, 2023 12:00:00").getTime();
+    var timer = setInterval(function() {
+ 
+        let now = new Date().getTime(); 
+        let t = endDate - now;
+        
+        if (t >= 0) {
+ 
+            let gunler = Math.floor(t / (1000 * 60 * 60 * 24));
+            let saatler = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let dakikalar = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            let saniyeler = Math.floor((t % (1000 * 60)) / 1000);
+ 
+            document.getElementById("timer-gunler").innerHTML = gunler + 
+            "<span class='label'> gün</span>";
+ 
+            document.getElementById("timer-saatler").innerHTML= ("0" + saatler).slice(-2) +
+            "<span class='label'> sa</span>";
+ 
+            document.getElementById("timer-dakikalar").innerHTML= ("0" + dakikalar).slice(-2) +
+            "<span class='label'> dk</span>";
+ 
+            document.getElementById("timer-saniyeler").innerHTML= ("0" + saniyeler).slice(-2) +
+            "<span class='label'> sn</span>";
+        }
+        else { 
+            document.getElementById("timer").innerHTML = "Zaman bitti!"; 
+        }
+        
+        
+    }, 1000);
+      </script>
+      <div id="aynn">
+        !! Kampanyanın bitmesine kalan süre !!
+      </div>
+   </body>
+</html>
